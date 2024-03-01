@@ -1,0 +1,22 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+	
+"name":"Fiter Words",
+"version":"0.16",
+"description":"Takes out bad words from all your webpages",
+"manifest_version":2,
+"icons": { 
+	   "16": "sensitive-information (1)16.png",
+	   "32": "sensitive-information (1)32.png" ,
+	   "128":"sensitive-information (1)128.png" },
+"content_scripts":[
+   {
+	   "matches":["*://*/*"],
+	   "exclude_matches":[],
+	   "run_at":"document_end",
+	   "all_frames":true,
+	   "js":["script.js"]
+      }]
+
+}
